@@ -1,4 +1,4 @@
-# Curso Fullcycle
+# Curso Full Cycle - 2020
 
 A ideia é criar um log do curso, com alguns aprendizados e principalmente com alguns códigos utilizados no curso.
 
