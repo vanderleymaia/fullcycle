@@ -7,8 +7,10 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
     && tar -C /usr/local/bin -xzvf dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
     && rm dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
+WORKDIR /var/www
+
 
 RUN rm /etc/nginx/conf.d/default.conf
 
 # COPY ./nginx.conf /etc/nginx/conf.d
-COPY ./nginx.tmpl /etc/nginx/conf.d
+COPY ./nginx.tmpl /etc/nginx/conf.d/
