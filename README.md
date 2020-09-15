@@ -5,3 +5,8 @@ A ideia é criar um log do curso, com alguns aprendizados e principalmente com a
 ## DESAFIO - PUBLICANDO IMAGEM LARAVEL
 URL da Imagem gerada para o desafio:
 https://hub.docker.com/repository/docker/vanderleymaia/laravel_app
+
+## DESAFIO - IMAGEM GOLANG - Code.education Rocks!
+URL da imagem gerada para o desafio:
+https://hub.docker.com/repository/docker/vanderleymaia/codeeducation
+
