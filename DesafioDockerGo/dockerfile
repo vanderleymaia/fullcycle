@@ -1,5 +1,5 @@
 FROM scratch
 
-COPY main /go/bin/
+COPY src/main /go/bin/
  
 ENTRYPOINT ["/go/bin/main"]
