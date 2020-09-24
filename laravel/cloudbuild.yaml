@@ -26,6 +26,11 @@ steps:
   args: ['exec', '-d', 'app', 'php', '/var/www/artisan', 'key:generate']
 
 #STEP 06
-- id: 'Step 06 - Executar'
+- id: 'Step 06 - Migrations'
   name: 'gcr.io/cloud-builders/docker'
-  args: ['exec', '-d', 'app', 'php-fpm']
+  args: ['exec', '-d', 'app', 'php', '/var/www/artisan', 'migrate']
+
+#STEP 07
+- id: 'Step 07 - Executar'
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec', '-d', 'app', 'php', '/var/www/vendor/bin/phpunit', '-c', '/var/www/php/unit.xml']
