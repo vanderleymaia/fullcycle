@@ -38,4 +38,4 @@ steps:
 #STEP 07
 - id: 'Step 07 - Executar'
   name: 'gcr.io/cloud-builders/docker'
-  args: ['exec', '-t', 'app', 'php', '/var/www/vendor/bin/phpunit', '-c', '/var/www/php/unit.xml']
+  args: ['exec', '-t', 'app', 'php', '/var/www/vendor/bin/phpunit', '-c', '/var/www/phpunit.xml']
