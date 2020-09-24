@@ -10,4 +10,7 @@ https://hub.docker.com/repository/docker/vanderleymaia/laravel_app
 URL da imagem gerada para o desafio:
 https://hub.docker.com/repository/docker/vanderleymaia/codeeducation
 
+## DESAFIO - PROCESSO CI 01 
+O arquivo cloudbuild está em: ./laravel/docker-compose.cloudbuild.yaml
+
 
