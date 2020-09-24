@@ -22,7 +22,7 @@ RUN chown -R www-data:www-data /var/www
 #             php artisan config:cache
 
 # Copiar tudo que está na raiz para /var/www (como estamos usando WORDIR /var/www poderíamos simplesmente usar COPY . .
-# COPY . /var/www
+COPY . /var/www
 
 
 
