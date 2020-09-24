@@ -1,6 +1,11 @@
 steps:
 # running docker-compose
-#STEP 1
-- id: "Step 01 - Realizando composer up"
-  name: 'gcr.io/$PROJECT_ID/docker-compose'
-  args: ['-f', './laravel/docker-compose.cloudbuild.yaml', 'up', -d]
+#STEP 00
+- id: 'Step 00 - Realizando composer up'
+  name: 'gcr.io/$PROJECT_ID/docker-compose:1.24.0'
+  args: ['-f', './laravel/docker-compose.cloudbuild.yaml', 'up', '-d']
+  
+#STEP 01
+- id: 'Step 01 - Rodando docker ps'
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['ps']
