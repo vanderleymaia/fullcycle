@@ -9,3 +9,8 @@ steps:
 - id: 'Step 01 - Rodando docker ps'
   name: 'gcr.io/cloud-builders/docker'
   args: ['ps']
+
+#STEP 02
+- id: 'Step 02 - Rodando composer'
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec', '-t', 'app', 'composer', 'install']
