@@ -10,7 +10,7 @@ steps:
   # args: ['up', '-d']
 
 #STEP 01 ACCESS ROOT
-- id: "Step 01 - Chown in /var/www"
+- id: "Step 01 - chown in /var/www"
   name: 'gcr.io/cloud-builders/docker'
   args: ['exec','-u','root','-t','app','chown','-R','www-data:www-data','/var/www']
   
