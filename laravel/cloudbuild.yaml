@@ -1,9 +1,12 @@
 steps:
 # running docker-compose
 #STEP 00
-- id: 'Step 00 - Realizando docker-compose up'
-  name: 'gcr.io/$PROJECT_ID/docker-compose:1.24.0'
-  args: ['-f', './laravel/docker-compose.cloudbuild.yaml', 'up', '-d']
+# - id: 'Step 00 - Realizando docker-compose up'
+#   name: 'gcr.io/$PROJECT_ID/docker-compose:1.24.0'
+#   args: ['-f', './laravel/docker-compose.cloudbuild.yaml', 'up', '-d']
+- id: "Step 00 - Realizando docker-compose up"
+  name: 'docker/compose:1.26.2'
+  args: ['up', '-d']
 
 #STEP 01 ACCESS ROOT
 - id: "Step 01 - Chown in /var/www"
