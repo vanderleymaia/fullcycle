@@ -6,7 +6,8 @@ steps:
 #   args: ['-f', './laravel/docker-compose.cloudbuild.yaml', 'up', '-d']
 - id: "Step 00 - Realizando docker-compose up"
   name: 'docker/compose'
-  args: ['up', '-d']
+  args: ['-f', './laravel/docker-compose.cloudbuild.yaml', 'up', '-d']
+  # args: ['up', '-d']
 
 #STEP 01 ACCESS ROOT
 - id: "Step 01 - Chown in /var/www"
