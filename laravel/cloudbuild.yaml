@@ -5,16 +5,11 @@ steps:
   name: 'gcr.io/$PROJECT_ID/docker-compose:1.24.0'
   args: ['-f', './laravel/docker-compose.cloudbuild.yaml', 'up', '-d']
 
-#STEP 00b ERRATA
-- id: "Chown in /var/www"
+#STEP 01 ACCESS ROOT
+- id: "Step 01 - Chown in /var/www"
   name: 'gcr.io/cloud-builders/docker'
   args: ['exec','-u','root','-t','app','chown','-R','www-data:www-data','/var/www']
   
-#STEP 01
-- id: 'Step 01 - Rodando docker ps'
-  name: 'gcr.io/cloud-builders/docker'
-  args: ['ps']
-
 #STEP 02
 - id: 'Step 02 - Rodando composer install'
   name: 'gcr.io/cloud-builders/docker'
